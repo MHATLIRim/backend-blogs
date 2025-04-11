@@ -6,7 +6,7 @@ const {
     getBlogs,
     getBlogsPaginated,
     getCommentsPaginated,
-    likeBlog,
+    likeBlog, 
     getBlogById,
     createBlog,
     updateBlog,
@@ -63,6 +63,6 @@ router.put("/:blogId/comments/:commentId", authMiddleware, updateComment);
 router.delete("/:blogId/comments/:commentId", authMiddleware, deleteComment);
 
 // 🔹 Route pour liker un blog (auth requis)
-router.post("/like/:blogId", authMiddleware, likeBlog);
+router.post("/like/:blogId", authMiddleware, likeBlog); 
 
 module.exports = router;
